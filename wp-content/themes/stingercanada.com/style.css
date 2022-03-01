@@ -1,0 +1,210 @@
+@charset "UTF-8";
+/*
+Theme Name: Biomekanikal Detailing Supplies & Chemical Distribution
+Theme URI: 
+Author: the Development team
+Author URI: https://wordpress.org/
+Description: A theme for WordPress 5.
+Requires at least: WordPress 4.9.6
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: wp5default
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+WP5 Default is based on Underscores https://underscores.me/, (C) 2012-2018 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Variables
+# Normalize
+# Typography ## Headings ## Copy
+# Elements ## Lists ## Tables
+# Forms ## Buttons ## Fields
+# Navigation ## Links ## Menus ## Next & Previous
+# Accessibility
+# Alignments
+# Clearings
+# Layout
+# Widgets
+# Content ## Archives ## Posts and pages ## Comments
+# Blocks
+# Media ## Captions ## Galleries
+--------------------------------------------------------------*/
+/*
+ * Chrome renders extra-wide &nbsp; characters for the Hoefler Text font.
+ * This results in a jumping cursor when typing in both the Classic and block
+ * editors. The following font-face override fixes the issue by manually inserting
+ * a custom font that includes just a Hoefler Text space replacement for that
+ * character instead.
+ */
+
+html {line-height: 1.15; -webkit-text-size-adjust: 100%; }
+body {width: 100%;}
+* { -webkit-box-sizing: border-box; box-sizing: border-box; margin:0; padding:0; }
+@font-face {
+	font-family: 'badburge';
+	src: url('http://localhost/sites/usbuckingbullassociation/wp-content/themes/fonts/bad-grunge.ttf');
+	font-weight: normal;
+}
+
+
+
+h1{
+    font-family: 'badburge' !important; 
+}
+.section-1-title h1{
+	text-shadow: 5px 0px 8px #cc0000 !important;
+}
+.section-2-title h1{
+	text-shadow: 5px 0px 8px #f6c106  !important;
+}
+.section-3-title h1{
+	font-size: 72px;
+	background-image: linear-gradient(45deg, #CC0000, #750000);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.section-3-events .elementor-image-box-img img{
+	height: 300px;
+	object-fit: cover;
+}
+.section-3-events h1.elementor-image-box-title a{
+    display: flex;
+    padding: 0 5%;
+    justify-content: space-between;
+}
+.section-3-events-title h1{
+	font-size: 72px;
+	font-weight: 100;
+}
+.section-4-schedule h2{
+	background-image: linear-gradient(45deg, #FFCC00, #FF6600);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.section-4-schedule .schedult-date{
+	position: relative;
+}
+
+.section-4-schedule .schedult-date::after {
+    content: '';
+    position: absolute;
+    background: url(http://localhost/sites/usbuckingbullassociation/wp-content/uploads/2022/03/circle-arrow-right.png) no-repeat;
+    width: 100%;
+    height: 100%;
+    transform: translate(86%, 35%);
+    z-index: 1;
+}
+.section-5{
+	position: relative;
+}
+.section-5 h2{
+	background-image: linear-gradient(45deg, #FFCC00, #FF6600);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+/* subscribe */
+.subscribe-footer {
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+}
+.subscribe-footer .email-address input{
+	padding: 3%;
+    border: none;
+    outline: none;
+	width: 100%;
+}
+
+.subscribe-footer input.wpcf7-form-control.has-spinner.wpcf7-submit {
+    padding: 9.5px;
+    border: none;
+    outline: none;
+	background-image: linear-gradient(45deg, #CC0000, #750000);
+	width: 100%;
+	color: #fff;
+}
+
+
+/* main menu */
+@media only screen and (max-width: 1537px){
+	a.hfe-menu-item{
+		font-size: 14px;
+	}
+}
+@media only screen and (max-width: 1400px){
+	a.hfe-menu-item{
+		font-size: 12px;
+	}
+}
+@media only screen and (max-width: 1250px){
+	/* 	menu */
+	.elementor-6 .elementor-element.elementor-element-41e4119 {
+		width: 60%;
+	}
+	.elementor-6 .elementor-element.elementor-element-84e8b85 {
+		width: 25%;
+	}
+	.elementor-6 .elementor-element.elementor-element-3e46728 {
+		width: 5%;
+	}
+	.elementor-6 .elementor-element.elementor-element-c1daab0 {
+		width: 5%;
+	}
+	.elementor-6 .elementor-element.elementor-element-efb6c17 {
+		width: 5%;
+	}
+}
+/* tablet */
+@media only screen and (max-width: 768px){
+	/* 	menu */
+	.elementor-6 .elementor-element.elementor-element-41e4119 {
+		width: 10%;
+	}
+	.elementor-6 .elementor-element.elementor-element-84e8b85 {
+		width: 70%;
+	}
+	.elementor-6 .elementor-element.elementor-element-3e46728 {
+		width: 6.66%;
+	}
+	.elementor-6 .elementor-element.elementor-element-c1daab0 {
+		width: 6.66%;
+	}
+	.elementor-6 .elementor-element.elementor-element-efb6c17 {
+		width: 6.66%;
+	}
+	/* 	subscribe */
+	.subscribe-footer{
+		justify-content: center;
+	}
+	.section-4-schedule .schedult-date::after {
+		display:none;
+	}
+}
+
+/* MOBILE */
+@media only screen and (max-width: 500px){
+	/* 	menu */
+	.elementor-6 .elementor-element.elementor-element-84e8b85 {
+		width: 60%;
+	}
+	.elementor-6 .elementor-element.elementor-element-3e46728 {
+		width: 10%;
+	}
+	.elementor-6 .elementor-element.elementor-element-c1daab0 {
+		width: 10%;
+	}
+	.elementor-6 .elementor-element.elementor-element-efb6c17 {
+		width: 10%;
+	}
+}
